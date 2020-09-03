@@ -1,0 +1,109 @@
+<XmlTransformation Version="1.0"><Transform Direction="ToCds"><SelectEach dest="DATAPACKET\ROWDATA\ROW" from="\sistema"><Select dest="@versao" from="@versao"/><Select dest="@cProd" from="\det\prod\cProd"/><Select dest="@cEAN" from="\det\prod\cEAN"/><Select dest="@xProd" from="\det\prod\xProd"/><Select dest="@NCM" from="\det\prod\NCM"/><Select dest="@EXTIPI" from="\det\prod\EXTIPI"/><Select dest="@genero" from="\det\prod\genero"/><Select dest="@uCom" from="\det\prod\uCom"/><Select dest="@cEANTrib" from="\det\prod\cEANTrib"/><Select dest="@uTrib" from="\det\prod\uTrib"/><Select dest="@qTrib" from="\det\prod\qTrib"/><Select dest="@vUnCom" from="\det\prod\vUnCom"/><Select dest="@vUnTrib" from="\det\prod\vUnTrib"/><Select dest="@CEST" from="\det\prod\CEST"/><Select dest="@orig" from="\det\imposto\ICMS\orig"/><Select dest="@CST" from="\det\imposto\ICMS\CST"/></SelectEach></Transform><XmlSchema RootName="sistema"><![CDATA[<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="sistema" type="sistemaType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="sistemaType">
+    <sequence>
+      <element name="det" type="detType"/>
+    </sequence>
+    <attribute name="versao" type="xs:string"/>
+    <attribute name="xmlns" type="xs:string"/>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="det" type="detType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="detType">
+    <sequence>
+      <element name="prod" type="prodType"/>
+      <element name="imposto" type="impostoType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="prod" type="prodType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="prodType">
+    <sequence>
+      <element name="cProd" type="cProdType"/>
+      <element name="cEAN" type="cEANType"/>
+      <element name="xProd" type="xProdType"/>
+      <element name="NCM" type="NCMType"/>
+      <element name="EXTIPI" type="EXTIPIType"/>
+      <element name="genero" type="generoType"/>
+      <element name="uCom" type="uComType"/>
+      <element name="cEANTrib" type="cEANTribType"/>
+      <element name="uTrib" type="uTribType"/>
+      <element name="qTrib" type="qTribType"/>
+      <element name="vUnCom" type="vUnComType"/>
+      <element name="vUnTrib" type="vUnTribType"/>
+      <element name="CEST" type="CESTType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="cProd" type="cProdType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="cProdType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="cEAN" type="cEANType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="cEANType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="xProd" type="xProdType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="xProdType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="NCM" type="NCMType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="NCMType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="EXTIPI" type="EXTIPIType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="EXTIPIType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="genero" type="generoType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="generoType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="uCom" type="uComType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="uComType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="cEANTrib" type="cEANTribType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="cEANTribType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="uTrib" type="uTribType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="uTribType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="qTrib" type="qTribType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="qTribType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="vUnCom" type="vUnComType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="vUnComType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="vUnTrib" type="vUnTribType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="vUnTribType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="CEST" type="CESTType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="CESTType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="imposto" type="impostoType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="impostoType">
+    <sequence>
+      <element name="ICMS" type="ICMSType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ICMS" type="ICMSType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ICMSType">
+    <sequence>
+      <element name="orig" type="origType"/>
+      <element name="CST" type="CSTType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="orig" type="origType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="origType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="CST" type="CSTType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="CSTType">
+    <restriction base="xs:string"/>
+  </simpleType>
+</xs:schema>]]></XmlSchema><CdsSkeleton/><XslTransform/><Skeleton><![CDATA[<?xml version="1.0"?><DATAPACKET Version="2.0"><METADATA><FIELDS><FIELD attrname="versao" fieldtype="string" WIDTH="4"/><FIELD attrname="cProd" fieldtype="string" WIDTH="25"/><FIELD attrname="cEAN" fieldtype="string" WIDTH="13"/><FIELD attrname="xProd" fieldtype="string" WIDTH="120"/><FIELD attrname="NCM" fieldtype="string" WIDTH="8"/><FIELD attrname="EXTIPI" fieldtype="string" WIDTH="2"/><FIELD attrname="genero" fieldtype="string" WIDTH="1"/><FIELD attrname="uCom" fieldtype="string" WIDTH="20"/><FIELD attrname="cEANTrib" fieldtype="string" WIDTH="13"/><FIELD attrname="uTrib" fieldtype="string" WIDTH="20"/><FIELD attrname="qTrib" fieldtype="string" WIDTH="21"/><FIELD attrname="vUnCom" fieldtype="string" WIDTH="21"/><FIELD attrname="vUnTrib" fieldtype="string" WIDTH="21"/><FIELD attrname="CEST" fieldtype="string" WIDTH="7"/><FIELD attrname="orig" fieldtype="string" WIDTH="1"/><FIELD attrname="CST" fieldtype="string" WIDTH="3"/></FIELDS><PARAMS/></METADATA><ROWDATA/><METADATA><FIELDS><FIELD attrname="versao" fieldtype="string" WIDTH="4"/><FIELD attrname="cProd" fieldtype="string" WIDTH="25"/><FIELD attrname="cEAN" fieldtype="string" WIDTH="13"/><FIELD attrname="xProd" fieldtype="string" WIDTH="120"/><FIELD attrname="NCM" fieldtype="string" WIDTH="8"/><FIELD attrname="EXTIPI" fieldtype="string" WIDTH="2"/><FIELD attrname="genero" fieldtype="string" WIDTH="1"/><FIELD attrname="uCom" fieldtype="string" WIDTH="20"/><FIELD attrname="cEANTrib" fieldtype="string" WIDTH="13"/><FIELD attrname="uTrib" fieldtype="string" WIDTH="20"/><FIELD attrname="qTrib" fieldtype="string" WIDTH="21"/><FIELD attrname="vUnCom" fieldtype="string" WIDTH="21"/><FIELD attrname="vUnTrib" fieldtype="string" WIDTH="21"/><FIELD attrname="CEST" fieldtype="string" WIDTH="7"/><FIELD attrname="orig" fieldtype="string" WIDTH="1"/><FIELD attrname="CST" fieldtype="string" WIDTH="3"/></FIELDS><PARAMS/></METADATA><ROWDATA/></DATAPACKET>
+]]></Skeleton></XmlTransformation>

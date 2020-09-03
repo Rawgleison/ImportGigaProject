@@ -1,0 +1,107 @@
+<XmlTransformation Version="1.0"><Transform Direction="ToCds"><SelectEach dest="DATAPACKET\ROWDATA\ROW" from="\sistema"><Select dest="@versao" from="@versao"/><Select dest="@CPF" from="\dest\CPF"/><Select dest="@CNPJ" from="\dest\CNPJ"/><Select dest="@xNome" from="\dest\xNome"/><Select dest="@xLgr" from="\dest\enderDest\xLgr"/><Select dest="@nro" from="\dest\enderDest\nro"/><Select dest="@xCpl" from="\dest\enderDest\xCpl"/><Select dest="@xBairro" from="\dest\enderDest\xBairro"/><Select dest="@cMun" from="\dest\enderDest\cMun"/><Select dest="@xMun" from="\dest\enderDest\xMun"/><Select dest="@UF" from="\dest\enderDest\UF"/><Select dest="@CEP" from="\dest\enderDest\CEP"/><Select dest="@cPais" from="\dest\enderDest\cPais"/><Select dest="@xPais" from="\dest\enderDest\xPais"/><Select dest="@fone" from="\dest\enderDest\fone"/><Select dest="@IE" from="\dest\IE"/><Select dest="@ISUF" from="\dest\ISUF"/><Select dest="@email" from="\dest\email"/></SelectEach></Transform><XmlSchema RootName="sistema"><![CDATA[<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="sistema" type="sistemaType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="sistemaType">
+    <sequence>
+      <element name="dest" type="destType"/>
+    </sequence>
+    <attribute name="versao" type="xs:string"/>
+    <attribute name="xmlns" type="xs:string"/>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="dest" type="destType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="destType">
+    <sequence>
+      <element name="CPF" type="CPFType"/>
+      <element name="CNPJ" type="CNPJType"/>
+      <element name="xNome" type="xNomeType"/>
+      <element name="enderDest" type="enderDestType"/>
+      <element name="IE" type="IEType"/>
+      <element name="ISUF" type="ISUFType"/>
+      <element name="email" type="emailType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="CPF" type="CPFType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="CPFType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="CNPJ" type="CNPJType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="CNPJType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="xNome" type="xNomeType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="xNomeType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="enderDest" type="enderDestType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="enderDestType">
+    <sequence>
+      <element name="xLgr" type="xLgrType"/>
+      <element name="nro" type="nroType"/>
+      <element name="xCpl" type="xCplType"/>
+      <element name="xBairro" type="xBairroType"/>
+      <element name="cMun" type="cMunType"/>
+      <element name="xMun" type="xMunType"/>
+      <element name="UF" type="UFType"/>
+      <element name="CEP" type="CEPType"/>
+      <element name="cPais" type="cPaisType"/>
+      <element name="xPais" type="xPaisType"/>
+      <element name="fone" type="foneType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="xLgr" type="xLgrType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="xLgrType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="nro" type="nroType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="nroType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="xCpl" type="xCplType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="xCplType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="xBairro" type="xBairroType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="xBairroType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="cMun" type="cMunType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="cMunType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="xMun" type="xMunType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="xMunType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="UF" type="UFType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="UFType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="CEP" type="CEPType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="CEPType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="cPais" type="cPaisType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="cPaisType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="xPais" type="xPaisType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="xPaisType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="fone" type="foneType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="foneType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="IE" type="IEType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="IEType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ISUF" type="ISUFType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ISUFType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="email" type="emailType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="emailType">
+    <restriction base="xs:string"/>
+  </simpleType>
+</xs:schema>]]></XmlSchema><CdsSkeleton/><XslTransform/><Skeleton><![CDATA[<?xml version="1.0"?><DATAPACKET Version="2.0"><METADATA><FIELDS><FIELD attrname="versao" fieldtype="string" WIDTH="4"/><FIELD attrname="CPF" fieldtype="string" WIDTH="11"/><FIELD attrname="CNPJ" fieldtype="string" WIDTH="14"/><FIELD attrname="xNome" fieldtype="string" WIDTH="58"/><FIELD attrname="xLgr" fieldtype="string" WIDTH="30"/><FIELD attrname="nro" fieldtype="string" WIDTH="10"/><FIELD attrname="xCpl" fieldtype="string" WIDTH="25"/><FIELD attrname="xBairro" fieldtype="string" WIDTH="30"/><FIELD attrname="cMun" fieldtype="string" WIDTH="7"/><FIELD attrname="xMun" fieldtype="string" WIDTH="20"/><FIELD attrname="UF" fieldtype="string" WIDTH="2"/><FIELD attrname="CEP" fieldtype="string" WIDTH="8"/><FIELD attrname="cPais" fieldtype="string" WIDTH="4"/><FIELD attrname="xPais" fieldtype="string" WIDTH="6"/><FIELD attrname="fone" fieldtype="string" WIDTH="15"/><FIELD attrname="IE" fieldtype="string" WIDTH="13"/><FIELD attrname="ISUF" fieldtype="string" WIDTH="9"/><FIELD attrname="email" fieldtype="string" WIDTH="60"/></FIELDS><PARAMS/></METADATA><ROWDATA/><METADATA><FIELDS><FIELD attrname="versao" fieldtype="string" WIDTH="4"/><FIELD attrname="CPF" fieldtype="string" WIDTH="11"/><FIELD attrname="CNPJ" fieldtype="string" WIDTH="14"/><FIELD attrname="xNome" fieldtype="string" WIDTH="58"/><FIELD attrname="xLgr" fieldtype="string" WIDTH="30"/><FIELD attrname="nro" fieldtype="string" WIDTH="10"/><FIELD attrname="xCpl" fieldtype="string" WIDTH="25"/><FIELD attrname="xBairro" fieldtype="string" WIDTH="30"/><FIELD attrname="cMun" fieldtype="string" WIDTH="7"/><FIELD attrname="xMun" fieldtype="string" WIDTH="20"/><FIELD attrname="UF" fieldtype="string" WIDTH="2"/><FIELD attrname="CEP" fieldtype="string" WIDTH="8"/><FIELD attrname="cPais" fieldtype="string" WIDTH="4"/><FIELD attrname="xPais" fieldtype="string" WIDTH="6"/><FIELD attrname="fone" fieldtype="string" WIDTH="15"/><FIELD attrname="IE" fieldtype="string" WIDTH="13"/><FIELD attrname="ISUF" fieldtype="string" WIDTH="9"/><FIELD attrname="email" fieldtype="string" WIDTH="60"/></FIELDS><PARAMS/></METADATA><ROWDATA/></DATAPACKET>
+]]></Skeleton></XmlTransformation>

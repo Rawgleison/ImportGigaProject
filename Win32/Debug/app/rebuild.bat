@@ -1,0 +1,1 @@
+"D:\Documentos\Gigatron\GigaProjetosXE8\Importa Giga2Giga\Win32\Debug\app\rebuild.exe" "D:\Documentos\Gigatron\Clientes\Franquia Bilac\Tabelas - Trevizan\PRODUTOS.DAT","D:\Documentos\Gigatron\GigaProjetosXE8\Importa Giga2Giga\Win32\Debug\app\ArquivoTXT\PRODUTOS.txt" /t:LII

@@ -1,0 +1,1 @@
+"D:\Documentos\Gigatron\GigaProjetosXE8\ImportGigaProject\ImportSoftLine2Giga\Win32\Release\app\rebuild.exe" "D:\Documentos\Gigatron\GigaProjetosXE8\ImportGigaProject\ImportSoftLine2Giga\Win32\Release\app\PRODUTOS.DAT","D:\Documentos\Gigatron\GigaProjetosXE8\ImportGigaProject\ImportSoftLine2Giga\Win32\Release\app\ArquivoTXT\PRODUTOS.txt" /t:LII

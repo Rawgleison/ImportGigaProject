@@ -1,0 +1,3 @@
+"C:\Program Files\WinRAR\WinRAR.exe" a D:\Documentos\Gigatron\GPProjetos_Delphi\ImportGigaProject\ImportExcel2Giga\Win32\Release\app\Distributable\ImportExcel2Giga_1.5.1.19.rar D:\Documentos\Gigatron\GPProjetos_Delphi\ImportGigaProject\ImportExcel2Giga\Win32\Release\app\ImportExcel2Giga.exe D:\Documentos\Gigatron\GPProjetos_Delphi\ImportGigaProject\ImportExcel2Giga\Win32\Release\app\fbclient.dll 
+D:\Documentos\Gigatron\GPProjetos_Delphi\ImportGigaProject\ImportExcel2Giga
+pause
